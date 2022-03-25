@@ -1,6 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const withTM = require('next-transpile-modules')(['@splinetool/react-spline'])
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+module.exports = withTM({
+  reactStrictMode: true,
+})
